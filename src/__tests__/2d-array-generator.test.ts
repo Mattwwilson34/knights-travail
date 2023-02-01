@@ -24,8 +24,8 @@ describe('Check 2D array creation', () => {
 	})
 
 	test('Error thrown if function params are not numbers', () => {
-		const height = 'string';
-		const width = true;
+		const height = 'string' as any
+		const width = true as any
 		expect(() => get2dArray(height, width)).toThrowError()
 	})
 })
