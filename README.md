@@ -1,6 +1,6 @@
-# Knight of Travalis Problem
+# Knight Travails Problem
 
-This repository contains a solution to the "Knight of Travalis" problem, which is a classic chess puzzle. In this puzzle, a knight is placed on a chess board and the goal is to visit each square on the board exactly once.
+This repository contains a solution to the "Knight of Travails" problem, which is a classic chess puzzle. In this puzzle, a knight is placed on a chess board and the goal is to visit each square on the board exactly once.
 
 ## Problem Statement
 
