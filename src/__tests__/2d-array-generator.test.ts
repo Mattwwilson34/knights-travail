@@ -24,7 +24,9 @@ describe('Check 2D array creation', () => {
 	})
 
 	test('Error thrown if function params are not numbers', () => {
+		/* eslint-disable  @typescript-eslint/no-explicit-any */
 		const height = 'string' as any
+		/* eslint-disable  @typescript-eslint/no-explicit-any */
 		const width = true as any
 		expect(() => get2dArray(height, width)).toThrowError()
 	})
