@@ -13,9 +13,9 @@ describe('Gameboard component', () => {
 		render(<Gameboard />)
 		const GameboardTile = screen.getAllByTestId('Gameboard-Tile')
 		expect(GameboardTile[0]).toBeInTheDocument()
-		expect(GameboardTile[0]).toHaveTextContent('00')
+		expect(GameboardTile[0]).toHaveTextContent(false)
 		expect(GameboardTile[63]).toBeInTheDocument()
-		expect(GameboardTile[63]).toHaveTextContent('77')
+		expect(GameboardTile[63]).toHaveTextContent(false)
 	})
 
 	it('Renders the correct number of gameboard tiles', () => {
