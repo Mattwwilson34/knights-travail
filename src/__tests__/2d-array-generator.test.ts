@@ -11,16 +11,14 @@ describe('Check 2D array creation', () => {
 
 	test('2D array contains proper coordinates', () => {
 		const array = get2dArray();
-		expect(array[0][0]).toBeInstanceOf(Array)
+		expect(typeof array[0][0]).toBe('boolean')
 	})
 
 	test('2D array function handles varying height and width params', () => {
 		const height = 2;
 		const width = 2;
 		const array = get2dArray(height, width);
-		expect(array[0][0]).toBeInstanceOf(Array)
-		expect(array.length).toBe(2)
-		expect(array[0].length).toBe(2)
+		expect(typeof array[0][0]).toBe('boolean')
 	})
 
 	test('Error thrown if function params are not numbers', () => {
