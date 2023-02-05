@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import Gameboard from './features/gameboard'
+import './utils/back-track-algorithm'
 
 function App() {
 
