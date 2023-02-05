@@ -3,11 +3,11 @@ import { v4 as uuidv4 } from 'uuid';
 import get2dArray from '../../../utils/2d-array-generator'
 
 const Gameboard = () => {
-	const gameboardArray: boolean[][] = get2dArray();
+	const gameboardArray: (boolean[] | number[])[] = get2dArray();
 	// 2D array not required to render gameboard
 	// flattening array reduces need for extra map function 
 	// will need to revisit when game logic introduced
-	const gameboardTiles: boolean[] = gameboardArray.flat()
+	const gameboardTiles: (boolean | number)[] = gameboardArray.flat()
 
 	return (
 		<div className="Gameboard" data-testid='Gameboard'>
