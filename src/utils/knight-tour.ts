@@ -1,36 +1,39 @@
 import get2dArray from "./2d-array-generator"
 
-const NUMBER_OF_ROWS = 5;
-const NUMBER_OF_COLS = 5;
 
-const OUT_OF_BOUNDS_POSITIVE = NUMBER_OF_ROWS;
-const OUT_OF_BOUNDS_NEGATIVE = -1;
 
-const PATH_ROW = [2, 1, -1, -2, -2, -1, 1, 2]
-const PATH_COL = [1, 2, 2, 1, -1, -2, -2, -1]
+function knightTour(rows: number, cols: number, rowStart: number, colStart: number): number[][] | boolean {
 
-const START_ROW = 0
-const START_COL = 0;
+  const pathRow = [2, 1, -1, -2, -2, -1, 1, 2]
+  const pathCol = [1, 2, 2, 1, -1, -2, -2, -1]
 
-function validMove(gameboard: number[][], row: number, col: number) {
-  return (row > OUT_OF_BOUNDS_NEGATIVE && row < OUT_OF_BOUNDS_POSITIVE && col > OUT_OF_BOUNDS_NEGATIVE && col < OUT_OF_BOUNDS_POSITIVE && gameboard[row][col] === 0)
+  const gameboard = get2dArray(rows, cols)
+
+  gameboard[rowStart][colStart] = 1;
+
+  if (findKnightTour(gameboard, rowStart, colStart, 1, rows, cols, pathRow, pathCol)) {
+    return gameboard
+  }
+  else {
+    console.log('no viable path from this starting position.')
+    return false
+  }
 }
 
-function findKnightTour(gameboard: number[][], row: number, col: number, move: number) {
+function findKnightTour(gameboard: number[][], row: number, col: number, move: number, rows: number, cols: number, pathRow: number[], pathCol: number[]) {
 
-  if (move === NUMBER_OF_ROWS * NUMBER_OF_COLS) {
+  if (move === rows * cols) {
     console.table(gameboard)
     return true
   }
   else {
-    //
-    for (let i = 0; i < PATH_ROW.length; i++) {
-      const rowNew = row + PATH_ROW[i]
-      const colNew = col + PATH_COL[i]
+    for (let i = 0; i < pathRow.length; i++) {
+      const rowNew = row + pathRow[i]
+      const colNew = col + pathCol[i]
       if (validMove(gameboard, rowNew, colNew)) {
         move++
         gameboard[rowNew][colNew] = move;
-        if (findKnightTour(gameboard, rowNew, colNew, move)) {
+        if (findKnightTour(gameboard, rowNew, colNew, move, rows, cols, pathRow, pathCol)) {
           return true
         }
         move--;
@@ -40,22 +43,8 @@ function findKnightTour(gameboard: number[][], row: number, col: number, move: n
   }
 }
 
-function knightTour(): boolean {
-
-  const gameboard = get2dArray(NUMBER_OF_ROWS, NUMBER_OF_COLS)
-
-  gameboard[START_ROW][START_COL] = 1;
-
-  if (findKnightTour(gameboard, START_ROW, START_COL, 1)) {
-    return true
-  }
-  else {
-    console.log('no viable path from this starting position.')
-    return false
-  }
-
+function validMove(gameboard: number[][], row: number, col: number) {
+  return (row > -1 && row < gameboard[0].length && col > -1 && col < gameboard[0].length && gameboard[row][col] === 0)
 }
-
-knightTour()
 
 export default knightTour
