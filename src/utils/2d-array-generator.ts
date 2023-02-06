@@ -9,10 +9,7 @@ const get2dArray = (height = 8, width = 8): number[][] => {
   for (let i = 0; i < height; i++) {
     const row = [];
     for (let j = 0; j < width; j++) {
-      const y = i;
-      const x = j;
-      const coordinates = [x, y];
-      row.push(coordinates);
+      row.push(0);
     }
     array.push(row);
   }
