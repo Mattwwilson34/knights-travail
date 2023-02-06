@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import Gameboard from './features/gameboard'
-import './utils/back-track-algorithm'
+import './utils/knight-tour'
 
 function App() {
 
