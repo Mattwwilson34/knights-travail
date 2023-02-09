@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import Gameboard from '../features/gameboard'
+import Gameboard from '../features/gameboard/components/Gameboard'
 import solution from '../utils/mock-solution-array'
 
 describe('Gameboard component', () => {
