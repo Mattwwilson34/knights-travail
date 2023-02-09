@@ -1,8 +1,8 @@
 import React from 'react'
 import './App.css'
-import Gameboard from './features/gameboard'
 import knightTour from './utils/knight-tour'
 import solution from './utils/mock-solution-array'
+import Gameboard from './features/gameboard/components/Gameboard'
 
 function App() {
   const handleClick = () => {
