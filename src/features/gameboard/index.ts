@@ -1,3 +1,2 @@
-import Gameboard from "./components/Gameboard";
-
+import Gameboard from "./components/Gameboard"
 export default Gameboard
