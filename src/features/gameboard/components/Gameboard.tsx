@@ -1,6 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import findIndex from '../../../utils/get-index-of-2D-array';
+import { Button } from '@mui/material'
 import Square from './Square';
 
 interface GameboardProps {
@@ -26,7 +27,7 @@ const Gameboard = ({ solution }: GameboardProps) => {
 		if (running) {
 			intervalId = window.setInterval(() => {
 				setStep((prevStep) => prevStep += 1)
-			}, 100)
+			}, 500)
 		}
 
 		setKnightX(coordinates[0])
@@ -55,7 +56,7 @@ const Gameboard = ({ solution }: GameboardProps) => {
 					})}
 				</Fragment>
 			})}
-			<button type='button' onClick={handleClick}>Start Simulation</button>
+			<Button variant='contained' onClick={handleClick}>Activate Knight</Button>
 		</div>
 	)
 }

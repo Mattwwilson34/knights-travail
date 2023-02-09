@@ -28,9 +28,9 @@ const Square = ({ x, y, knightX, knightY, moveNumber, visitedSquares }: SquarePr
 	return (
 		<div className={`square ${getSquareColor(x, y)}`} data-testid='Gameboard-Square'>
 			{isKnight ? (
-				<span role="img" aria-label="knight" style={{ fontSize: '4rem', color: 'blue' }}>♞</span>
+				<span role="img" aria-label="knight" className='knight'>♞</span>
 			) : visitedSquares.has(`${x},${y}`) ? (
-				<span role="img" aria-label="Checkmark" style={{ fontSize: '3rem', color: 'purple' }}>✔️</span>
+				<span role="img" aria-label="Checkmark">✔️</span>
 			) : moveNumber}
 		</div>
 	);
