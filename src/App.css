@@ -1,8 +1,29 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center
+}
+
+
+
 .Gameboard {
   display: flex;
   flex-wrap: wrap;
-  width: 640px;
+  height: 320px;
+  width: 320px;
+  margin-top: 20px;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100ch
+}
+
+.gameboard-container {
+  display: flex;
+  gap: 4rem;
 }
 
 .square {
@@ -10,7 +31,7 @@
   justify-content: center;
   align-items: center;
   background-color: lightgrey;
-  flex-basis: 80px; 
+  flex-basis: 40px; 
   aspect-ratio: 1/1;
   border: 1px solid black;
 }
@@ -22,3 +43,13 @@
 .white {
   background-color: white;
 }
+
+.knight {
+  font-size: 2rem;
+}
+
+@media (max-width: 720px) {
+  .gameboard-container {
+    flex-direction: column;
+  }
+  }

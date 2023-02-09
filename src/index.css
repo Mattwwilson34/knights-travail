@@ -1,3 +1,12 @@
 *,*::before,*::after {
   box-sizing:border-box;
+  font-family: Roboto;
+}
+
+h1,h2 {
+  margin-bottom:10px;
+}
+
+p {
+  margin: 0 0 10px 0;
 }
