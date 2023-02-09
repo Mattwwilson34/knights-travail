@@ -1,5 +1,5 @@
 import expect from 'expect'
-import get2dArray from '../utils/2d-array-generator'
+import get2dArray from '../utils/get-2D-array'
 
 describe('Check 2D array creation', () => {
 	test('2D array is created', () => {
