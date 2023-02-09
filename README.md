@@ -1,22 +1,49 @@
-# Knight Travails Problem
+# Knights Travail
 
-This repository contains a solution to the "Knight of Travails" problem, which is a classic chess puzzle. In this puzzle, a knight is placed on a chess board and the goal is to visit each square on the board exactly once.
+A implementation of the classic [Knight's Tour](https://en.wikipedia.org/wiki/Knight%27s_tour) problem, solved using TypeScript, Vite, and React.
 
-## Problem Statement
+## Features
+- Interactive chessboard for visualizing the knight's moves
+- Dynamic algorithm for finding the solution to the Knight's Tour problem
 
-Given an `n` x `n` chess board, write a program to find a knight's tour that covers all the squares on the board. A knight's tour is a sequence of moves of a knight on a chessboard such that the knight visits every square only once.
+## Screen Shots
+![ezgif com-video-to-gif (1)](https://user-images.githubusercontent.com/49503056/217901030-5069af47-f251-4ef5-8cfa-40a1a47cdf2c.gif)
 
-## Solution
 
-The solution to this problem is implemented using the backtracking algorithm. The basic idea is to start from a given cell, and keep moving the knight in all possible directions until a solution is found or all options have been exhausted. The program keeps track of the squares visited and if a square has already been visited, it backtracks to the previous square and tries the next option.
 
 ## Usage
+To run this project, clone the repository and install the dependencies:
 
-Project is currently in development. Check back for details on how to use the
-application.
+```js
+git clone https://github.com/mattwwilson34/knights-travail.git
+cd knights-travail
+npm install
+```
 
-## Example
+Start the development server with the following command:
 
-For a `5` x `5` board, the output will look like this:
+`npm run dev`
 
-s implemented using the backtracking algorithm. The basic idea is to start from a given cell, and keep moving the knight in all possible directions until a solution is found or all options have been exhausted. The program keeps track of the squares visited and if a square has already been visited, it backtracks to the previous square and tries the next option.
+This will launch a local development server. Once the development server is up and running you can open the project in your
+browser by pressing the `o` key.
+
+## Deployment
+This project is deployed using GitHub Pages and can be accessed at the following URL:
+
+https://mattwwilson34.github.io/knights-travail/
+
+## Development
+
+The Knights Travail project was developed using a test-driven development (TDD) approach, with a continuous integration pipeline via GitHub Actions, Jest, and ESLint.
+
+The continuous integration pipeline was set up using GitHub Actions. Whenever code is pushed to the repository, the pipeline automatically runs all tests using Jest and checks the code quality using ESLint. This ensures that the code is always in a working state and meets the coding standards.
+
+By using Jest for testing and ESLint for code quality, I am able to ensure that the code is working as expected and is well-structured, making it easier for others to contribute to the project. The use of GitHub Actions for continuous integration allowed me to automate the testing and code quality process, saving time and resources and ensuring that the code is always in a deployable state.
+
+## Contributing
+If you are interested in contributing to this project, please open a pull request with your changes. Your contributions are welcome and appreciated!
+
+## License
+This project is licensed under the MIT License. Please see the [LICENSE](LICENSE) file for more information.
+
+
